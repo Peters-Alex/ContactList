@@ -1,16 +1,14 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
+//import { useState } from 'react'
 
-import './App.css'
+import ContactList from './Component/ContactList'
+//import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-
+      <ContactList />
     </>
-  )
+  );
 }
 
 export default App
