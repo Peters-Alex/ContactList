@@ -15,7 +15,10 @@ const [contacts, setContacts] = useState(dummyContacts)
 useEffect(()=>{
     async function fetchContacts() {
         try {
-          // your fetch logic will go here
+            const apiUrl = "https://fsa-jsonplaceholder-69b5c48f1259.herokuapp.com/users";
+            const response = await fetch(apiUrl);
+            const responseToJson = await response.json();
+            setContacts(responseToJson);
         } catch (error) {
           console.error(error);
         }
